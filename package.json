@@ -3,10 +3,20 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "lite-server --baseDir=\"public\"",
+    "watch": "sass --watch src/scss:public/assets/css",
+    "start": "concurrently \"npm run watch\" \"npm run dev\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "live-server": "^1.2.2"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "lite-server": "^2.6.1",
+    "sass": "^1.85.0"
+  }
 }
